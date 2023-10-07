@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{data.name}}</title>
+    <!-- Incluye los estilos de Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-20">
+        <img class="w-full h-auto" src="{{data.image}}" alt="Imagen de ejemplo">
+        <div class="px-6 py-4">
+            <h2 class="text-xl font-semibold text-gray-800">{{data.name}}</h2>
+            <p class="mt-2 text-gray-600">{{data.species}}</p>
+        </div>
+
+        <div class="px-6 py-2">
+            <ul>
+                <li class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+                    <a href="{{ data.location.url }}">{{ data.location.name }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
